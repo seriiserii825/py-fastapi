@@ -14,3 +14,4 @@ class Hotels(Base):
     # created_at = Column(DateTime, default=datetime.now)
     # updated_at = Column(DateTime, default=datetime.now)
     
+    # alembic init migrations in terminal
