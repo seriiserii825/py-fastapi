@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Annotated, Optional
 from fastapi import FastAPI, Query, Depends
 from datetime import date
 from pydantic import BaseModel
@@ -16,7 +16,7 @@ class SHotelSearchArgs():
         location: str,
         date_from: str,
         date_to: str,
-        has_spa: Optional[bool] = None,
+        has_spa: Annotated[Optional[bool], Query()] = None,
         stars: Optional[int] = Query(None, ge=1, le=5)
             ) -> None:
         self.location = location
